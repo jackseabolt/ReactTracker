@@ -69,7 +69,7 @@ var Employee = React.createClass({
 
   render() {
     if ( this.state.editMode ) {
-      markup = (
+      return (
         <tr>
           <td>
             <input
@@ -98,9 +98,9 @@ var Employee = React.createClass({
             <button onClick={this.handleEmployeeUpdate}>Save</button>
           </td>
         </tr>
-      );
+        )
     } else {
-      markup = (
+      return (
         <tr>
           <td>{this.state.employee.name}</td>
           <td>{this.state.employee.email}</td>
@@ -112,7 +112,6 @@ var Employee = React.createClass({
           </td>
         </tr>
       );
-    }
-    return markup;
+    } 
   }
 }); 
